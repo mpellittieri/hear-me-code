@@ -1,8 +1,14 @@
-bread = 2
-peanutbutter = 1
-jelly = 1
+bread_slice = 4
+peanut_butter_serving = 2
+jelly_serving = 2
 
-if bread >= 2 and peanutbutter >= 1 and jelly >= 1:
-	print "I can make a peanut butter and jelly sandwich"
+necessary_bread = 2
+necessary_peanut_butter = 1
+necessary_jelly = 1
+
+total_sandwiches = min((bread_slice/necessary_bread),(peanut_butter_serving/necessary_peanut_butter), (jelly_serving/necessary_jelly))
+
+if bread_slice >= 2 and peanut_butter_serving >= 1 and jelly_serving >= 1:
+	print "I can make {0} sandwiches".format(total_sandwiches)
 else: 
-	print "Looks like I don't have a lunch today
+	print "Looks like I don't have a lunch today"
