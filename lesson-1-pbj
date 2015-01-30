@@ -6,9 +6,26 @@ necessary_bread = 2
 necessary_peanut_butter = 1
 necessary_jelly = 1
 
+open_face_pbj = bread_slice%2
+
 total_sandwiches = min((bread_slice/necessary_bread),(peanut_butter_serving/necessary_peanut_butter), (jelly_serving/necessary_jelly))
 
-if bread_slice >= 2 and peanut_butter_serving >= 1 and jelly_serving >= 1:
-	print "I can make {0} sandwiches".format(total_sandwiches)
-else: 
-	print "Looks like I don't have a lunch today"
+	
+if bread_slice == 0 and peanut_butter_serving == 0 and jelly_serving == 0:
+        print "You don't have ANY of the ingredients you need. Go to the store. "
+elif bread_slice > 0 and peanut_butter_serving == 0 and jelly_serving == 0:
+        print "You only have bread. Make some toast instead."
+elif bread_slice == 0 and peanut_butter_serving > 0 and jelly_serving == 0:
+        print "You only have peanut butter. Eat it with a spoon if you're desperate."
+elif bread_slice == 0 and peanut_butter_serving == 0 and jelly_serving > 0:
+        print "You only have jelly. This is a gross situation. Go to the store."
+elif bread_slice > 0 and peanut_butter_serving > 0 and jelly_serving == 0:
+        print "There's bread and peanut butter, but no jelly. If you're super hungry, just make a peanut butter sandwich."
+elif bread_slice > 0 and peanut_butter_serving == 0 and jelly_serving > 0:
+        print "There's bread and jelly, but you still need peanut butter."
+elif bread_slice == 0 and peanut_butter_serving > 0 and jelly_serving > 0:
+        print "There's peanut butter and jelly, but you need to buy bread."
+else:
+           print "I can make {0} peanut butter and jelly sandwiches and {1} open face peanut butter and jelly sandwiches.".format(total_sandwiches, open_face_pbj)
+#stuck on calculating open face sandwiches	
+
