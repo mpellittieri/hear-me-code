@@ -1,0 +1,8 @@
+bread = 2
+peanutbutter = 1
+jelly = 1
+
+if bread >= 2 and peanutbutter >= 1 and jelly >= 1:
+	print "I can make a peanut butter and jelly sandwich"
+else: 
+	print "Looks like I don't have a lunch today
